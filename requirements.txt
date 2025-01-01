@@ -9,4 +9,5 @@ transformers
 accelerate
 bitsandbytes
 langchain_huggingface
+
 -e .
