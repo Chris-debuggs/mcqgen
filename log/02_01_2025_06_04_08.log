@@ -1,0 +1,210 @@
+[2025-01-02 06:04:08,805] 134 langchain_huggingface.llms.huggingface_endpoint - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+[2025-01-02 06:04:08,805] 134 langchain_huggingface.llms.huggingface_endpoint - WARNING - WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+[2025-01-02 06:04:08,805] 134 langchain_huggingface.llms.huggingface_endpoint - WARNING - WARNING! device is not default parameter.
+                    device was transferred to model_kwargs.
+                    Please make sure that device is what you intended.
+[2025-01-02 06:04:10,540] 1707 asyncio - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494>
+Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 494, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 621, in _handle_scriptrunner_event_on_event_loop
+    self._local_sources_watcher.update_watched_modules()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 177, in update_watched_modules
+    self._register_necessary_watchers(modules_paths)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_necessary_watchers
+    self._register_watcher(str(Path(path).resolve()), name)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 136, in _register_watcher
+    watcher=PathWatcher(filepath, self.on_file_changed),
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 107, in __init__
+    path_watcher.watch_path(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 185, in watch_path
+    folder_handler.watch = self._observer.schedule(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/api.py", line 306, in schedule
+    emitter.start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/utils/__init__.py", line 86, in start
+    self.on_thread_start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify.py", line 123, in on_thread_start
+    self._inotify = InotifyBuffer(path, self.watch.is_recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_buffer.py", line 37, in __init__
+    self._inotify = Inotify(path, recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 158, in __init__
+    Inotify._raise_error()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 401, in _raise_error
+    raise OSError(errno.EMFILE, "inotify instance limit reached")
+OSError: [Errno 24] inotify instance limit reached
+[2025-01-02 06:04:50,581] 45 root - ERROR - Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/StreamlitAPP.py", line 33, in <module>
+    response = generate_evaluate_chain.run(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/_api/deprecation.py", line 180, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain/chains/base.py", line 592, in run
+    _output_key = self._run_output_key
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain/chains/base.py", line 540, in _run_output_key
+    raise ValueError(
+ValueError: `run` not supported when there is not exactly one output key. Got ['quiz', 'review'].
+
+[2025-01-02 06:07:02,439] 1707 asyncio - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494>
+Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 494, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 621, in _handle_scriptrunner_event_on_event_loop
+    self._local_sources_watcher.update_watched_modules()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 177, in update_watched_modules
+    self._register_necessary_watchers(modules_paths)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_necessary_watchers
+    self._register_watcher(str(Path(path).resolve()), name)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 136, in _register_watcher
+    watcher=PathWatcher(filepath, self.on_file_changed),
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 107, in __init__
+    path_watcher.watch_path(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 185, in watch_path
+    folder_handler.watch = self._observer.schedule(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/api.py", line 306, in schedule
+    emitter.start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/utils/__init__.py", line 86, in start
+    self.on_thread_start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify.py", line 123, in on_thread_start
+    self._inotify = InotifyBuffer(path, self.watch.is_recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_buffer.py", line 37, in __init__
+    self._inotify = Inotify(path, recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 158, in __init__
+    Inotify._raise_error()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 401, in _raise_error
+    raise OSError(errno.EMFILE, "inotify instance limit reached")
+OSError: [Errno 24] inotify instance limit reached
+[2025-01-02 06:11:00,363] 1707 asyncio - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494>
+Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 494, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 621, in _handle_scriptrunner_event_on_event_loop
+    self._local_sources_watcher.update_watched_modules()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 177, in update_watched_modules
+    self._register_necessary_watchers(modules_paths)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_necessary_watchers
+    self._register_watcher(str(Path(path).resolve()), name)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 136, in _register_watcher
+    watcher=PathWatcher(filepath, self.on_file_changed),
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 107, in __init__
+    path_watcher.watch_path(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 185, in watch_path
+    folder_handler.watch = self._observer.schedule(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/api.py", line 306, in schedule
+    emitter.start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/utils/__init__.py", line 86, in start
+    self.on_thread_start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify.py", line 123, in on_thread_start
+    self._inotify = InotifyBuffer(path, self.watch.is_recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_buffer.py", line 37, in __init__
+    self._inotify = Inotify(path, recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 158, in __init__
+    Inotify._raise_error()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 401, in _raise_error
+    raise OSError(errno.EMFILE, "inotify instance limit reached")
+OSError: [Errno 24] inotify instance limit reached
+[2025-01-02 06:12:28,338] 1707 asyncio - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494>
+Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 494, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 621, in _handle_scriptrunner_event_on_event_loop
+    self._local_sources_watcher.update_watched_modules()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 177, in update_watched_modules
+    self._register_necessary_watchers(modules_paths)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_necessary_watchers
+    self._register_watcher(str(Path(path).resolve()), name)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 136, in _register_watcher
+    watcher=PathWatcher(filepath, self.on_file_changed),
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 107, in __init__
+    path_watcher.watch_path(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 185, in watch_path
+    folder_handler.watch = self._observer.schedule(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/api.py", line 306, in schedule
+    emitter.start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/utils/__init__.py", line 86, in start
+    self.on_thread_start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify.py", line 123, in on_thread_start
+    self._inotify = InotifyBuffer(path, self.watch.is_recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_buffer.py", line 37, in __init__
+    self._inotify = Inotify(path, recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 158, in __init__
+    Inotify._raise_error()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 401, in _raise_error
+    raise OSError(errno.EMFILE, "inotify instance limit reached")
+OSError: [Errno 24] inotify instance limit reached
+[2025-01-02 06:12:33,515] 1707 asyncio - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at /home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py:494>
+Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 494, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/runtime/app_session.py", line 621, in _handle_scriptrunner_event_on_event_loop
+    self._local_sources_watcher.update_watched_modules()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 177, in update_watched_modules
+    self._register_necessary_watchers(modules_paths)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_necessary_watchers
+    self._register_watcher(str(Path(path).resolve()), name)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/local_sources_watcher.py", line 136, in _register_watcher
+    watcher=PathWatcher(filepath, self.on_file_changed),
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 107, in __init__
+    path_watcher.watch_path(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/streamlit/watcher/event_based_path_watcher.py", line 185, in watch_path
+    folder_handler.watch = self._observer.schedule(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/api.py", line 306, in schedule
+    emitter.start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/utils/__init__.py", line 86, in start
+    self.on_thread_start()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify.py", line 123, in on_thread_start
+    self._inotify = InotifyBuffer(path, self.watch.is_recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_buffer.py", line 37, in __init__
+    self._inotify = Inotify(path, recursive, event_mask)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 158, in __init__
+    Inotify._raise_error()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/watchdog/observers/inotify_c.py", line 401, in _raise_error
+    raise OSError(errno.EMFILE, "inotify instance limit reached")
+OSError: [Errno 24] inotify instance limit reached
+[2025-01-02 06:16:32,484] 45 root - ERROR - Traceback (most recent call last):
+  File "/home/voidreaper/Projects/mcqgen/StreamlitAPP.py", line 33, in <module>
+    response = generate_evaluate_chain(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/_api/deprecation.py", line 180, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain/chains/base.py", line 380, in __call__
+    return self.invoke(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain/chains/base.py", line 133, in invoke
+    callback_manager = CallbackManager.configure(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/callbacks/manager.py", line 1569, in configure
+    return _configure(
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/callbacks/manager.py", line 2304, in _configure
+    debug = _get_debug()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/callbacks/manager.py", line 59, in _get_debug
+    return get_debug()
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/site-packages/langchain_core/globals.py", line 130, in get_debug
+    with warnings.catch_warnings():
+  File "/home/voidreaper/Projects/mcqgen/env/lib/python3.8/warnings.py", line 446, in __init__
+    self._module = sys.modules['warnings'] if module is None else module
+KeyError: 'warnings'
+
+[2025-01-02 06:17:35,842] 134 langchain_huggingface.llms.huggingface_endpoint - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+[2025-01-02 06:17:35,843] 134 langchain_huggingface.llms.huggingface_endpoint - WARNING - WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+[2025-01-02 06:17:55,904] 293 langchain_core.callbacks.manager - WARNING - Error in StdOutCallbackHandler.on_chain_start callback: AttributeError("'NoneType' object has no attribute 'get'")
+[2025-01-02 06:17:55,904] 293 langchain_core.callbacks.manager - WARNING - Error in StdOutCallbackHandler.on_chain_start callback: AttributeError("'NoneType' object has no attribute 'get'")
+[2025-01-02 06:18:03,626] 293 langchain_core.callbacks.manager - WARNING - Error in StdOutCallbackHandler.on_chain_start callback: AttributeError("'NoneType' object has no attribute 'get'")
